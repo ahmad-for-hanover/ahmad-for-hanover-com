@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Ahmad for Hanover Township Committee
+   style.css  —  first pass
+   Palette and type are locked. Tokens live here so there is one source of truth.
+   ========================================================================== */
+
+:root {
+  /* ---- Locked palette ---- */
+  --blue:       #173A6B;  /* primary */
+  --gold:       #CBA135;  /* accent only, never large fills */
+  --slate:      #4A5568;  /* support / body text */
+  --light-blue: #A9CCEE;  /* fills / backgrounds, never text */
+  --cream:      #F4EFE3;  /* ground, used instead of white */
+  --white:      #FFFFFF;  /* clean ground for the masthead; flag-inspired (red detail TBD) */
+
+  /* ---- Derived utility tones (kept on-palette) ---- */
+  --blue-deep:  #102a4e;  /* darker blue for depth on the navy panel */
+  --cream-card: #fbf8f1;  /* slightly lifted cream for cards on cream ground */
+  --ink:        #1f2733;  /* near-black for body text, warmer than pure black */
+  --hairline:   rgba(23, 58, 107, 0.14);
+
+  /* ---- Type ---- */
+  --serif: "EB Garamond", Georgia, "Times New Roman", serif;  /* display only */
+  --sans:  "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* ---- Layout ---- */
+  --maxw: 1140px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --radius: 10px;
+}
+
+/* ---- Reset-ish ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue); }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Big serif moments, clean sans everywhere else */
+h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
+
+.eyebrow {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0 0 0.4rem;
+}
+.eyebrow.center,
+.section-title.center,
+.placeholder-note.center { text-align: center; }
+
+.section-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--blue);
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.05s ease, background 0.15s ease, color 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-gold {
+  background: linear-gradient(180deg, #E0BC4A 0%, #CBA135 100%);
+  color: var(--blue-deep);
+  border-color: #CBA135;
+}
+.btn-gold:hover {
+  background: linear-gradient(180deg, #D4AE3E 0%, #B9912D 100%);
+  border-color: #b9912d;
+}
+.btn-blue {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+.btn-blue:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+
+/* ==========================================================================
+   HEADER / NAV
+   ========================================================================== */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--hairline);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+}
+.brand { text-decoration: none; }
+.brand-placeholder {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.01em;
+}
+.brand-for { color: var(--gold); font-style: italic; }
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+.primary-nav a {
+  font-family: var(--sans);
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+.primary-nav a:hover { color: var(--blue-deep); }
+.nav-cta { color: var(--white) !important; }
+.nav-cta:hover { color: var(--white) !important; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--blue);
+  display: block;
+}
+
+/* ==========================================================================
+   SPLIT HERO (Layout B)
+   ========================================================================== */
+.hero {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 520px;
+  overflow: hidden;
+}
+
+.hero-band {
+  background: var(--blue);
+}
+
+.hero-panel {
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  padding: clamp(2.5rem, 6vw, 5rem) var(--gutter);
+}
+.hero-copy { max-width: 30rem; margin-left: auto; }
+.hero-copy .eyebrow { font-size: 0.95rem; }
+
+.hero-title {
+  color: var(--cream);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.08;
+  margin: 0 0 1rem;
+}
+.hero-sub {
+  color: var(--light-blue);
+  font-size: 1.1rem;
+  margin: 0 0 1.8rem;
+}
+.hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+.hero-photo { background: var(--light-blue); position: relative; overflow: hidden; }
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+  display: block;
+}
+.hero-photo-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top,
+    rgba(23,58,107,0.55) 0%,
+    rgba(23,58,107,0.22) 20%,
+    rgba(23,58,107,0.0) 42%);
+}
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(23, 58, 107, 0.06),
+      rgba(23, 58, 107, 0.06) 12px,
+      rgba(23, 58, 107, 0.10) 12px,
+      rgba(23, 58, 107, 0.10) 24px
+    );
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   BRAND PILLARS
+   ========================================================================== */
+.pillars { background: var(--cream); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pillar {
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+.pillar + .pillar { border-left: 1px solid var(--hairline); }
+.pillar-mark { color: var(--gold); margin-bottom: 0.6rem; }
+.pillar-mark svg { width: 32px; height: 32px; }
+.pillar h2 {
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+.pillar p { color: var(--slate); margin: 0; }
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+.about { background: var(--white); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+.about-ph { min-height: 380px; border-radius: var(--radius); }
+.about-body p { color: var(--slate); margin: 0 0 1rem; font-size: 1.05rem; }
+
+.pull-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.3;
+  color: var(--blue);
+  border-left: 3px solid var(--gold);
+  padding: 0.4rem 0 0.4rem 1.4rem;
+  margin: 1.6rem 0;
+}
+
+/* ==========================================================================
+   ISSUES
+   ========================================================================== */
+.issues { background: var(--blue); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.issues .section-title { color: var(--cream); }
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.issue-card {
+  background: var(--cream-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+}
+.issue-card h3 {
+  font-family: var(--serif);
+  color: var(--blue);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+.issue-card p { color: var(--slate); margin: 0; }
+
+/* ==========================================================================
+   EVENTS / DONATE / GET INVOLVED placeholders
+   ========================================================================== */
+.events { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.placeholder-note { color: var(--slate); font-style: italic; }
+
+.donate { background: var(--white); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.donate-inner { text-align: center; max-width: 40rem; margin-inline: auto; }
+.donate-inner p { color: var(--slate); margin: 0 0 1.4rem; font-size: 1.05rem; }
+
+.get-involved { background: var(--light-blue); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.get-involved-inner { text-align: center; max-width: 40rem; margin-inline: auto; }
+.get-involved-inner p { color: var(--blue-deep); margin: 0 0 1.4rem; font-size: 1.05rem; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer { background: var(--blue-deep); color: var(--cream); }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 2rem;
+  flex-wrap: wrap;
+}
+.footer-brand { display: flex; align-items: center; gap: 0.9rem; }
+.emblem-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: var(--light-blue);
+}
+.footer-name { font-family: var(--serif); font-size: 1.1rem; margin: 0; }
+.disclaimer { font-size: 0.85rem; color: var(--light-blue); margin: 0; }
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 860px) {
+  /* Nav collapses to toggle */
+  .nav-toggle { display: flex; }
+  .primary-nav {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--hairline);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .primary-nav.open { max-height: 420px; }
+  .primary-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem var(--gutter) 1.2rem;
+  }
+  .primary-nav li { border-top: 1px solid var(--hairline); }
+  .primary-nav a { display: block; padding: 0.9rem 0; }
+  .nav-cta { display: inline-block; margin-top: 0.8rem; }
+
+  /* Hero stacks, HEADLINE FIRST then photo (per Mirella) */
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero-copy { margin-left: 0; max-width: none; }
+  .hero-photo { order: 2; }
+  .hero-panel { order: 1; }
+
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar + .pillar {
+    border-left: 0;
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.75rem;
+    margin-top: 0.5rem;
+  }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { order: 2; }
+  .issues-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 861px) and (max-width: 1024px) {
+  .issues-grid { grid-template-columns: repeat(2, 1fr); }
+}
