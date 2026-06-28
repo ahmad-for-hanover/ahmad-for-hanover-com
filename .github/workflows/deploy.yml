@@ -28,4 +28,12 @@ jobs:
           aws s3 sync . s3://ahmad-for-hanover-com \
             --delete \
             --exclude ".git/*" \
-            --exclude ".github/*"
+            --exclude ".github/*" \
+            --exclude "README.md" \
+            --exclude ".gitignore"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E2NAII3IUIZAI \
+            --paths "/*"
