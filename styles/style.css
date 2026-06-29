@@ -294,6 +294,13 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
    ========================================================================== */
 .issues { background: var(--blue); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .issues .section-title { color: var(--cream); }
+.issues-intro {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+  color: var(--cream);
+}
 .issues-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
