@@ -270,6 +270,8 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   padding: 0.4rem 0 0.4rem 1.4rem;
   margin: 1.6rem 0;
 }
+.about-links { font-size: 0.95rem; }
+.about-links a { font-weight: 600; border-bottom: 1.5px solid var(--gold); text-decoration: none; padding-bottom: 1px; }
 
 /* ==========================================================================
    ISSUES
