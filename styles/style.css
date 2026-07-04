@@ -438,12 +438,6 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
 }
 .overlay-dots span.active { background: var(--gold); }
 
-@media (max-width: 860px) {
-  :root { --leading: 1.45; }
-  .issue-overlay-panel { max-height: 90vh; padding: 2rem 1.4rem 1.4rem; }
-  .overlay-swipe-hint { display: block; }
-}
-
 /* ==========================================================================
    EVENTS / DONATE / GET INVOLVED placeholders
    ========================================================================== */
@@ -490,6 +484,9 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 860px) {
+  :root { --leading: 1.45; }
+  .issue-overlay-panel { max-height: 90vh; padding: 2rem 1.4rem 1.4rem; }
+  .overlay-swipe-hint { display: block; }
   /* Nav collapses to toggle */
   .nav-toggle { display: flex; }
   .primary-nav {
