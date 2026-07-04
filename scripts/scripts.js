@@ -1,6 +1,6 @@
 /* ==========================================================================
    Ahmad for Hanover  —  script.js
-   Minimal: mobile nav toggle only.
+   Mobile nav toggle, issues overlay, inline story carousel.
    ========================================================================== */
 (function () {
   "use strict";
@@ -118,26 +118,24 @@
   }, { passive: true });
 })();
 
-/* ---- Story overlay: open/close, prev/next, swipe, keyboard, dots ---- */
+/* ---- Story carousel (inline): prev/next, swipe, dots ---- */
 (function () {
-  var overlay = document.getElementById('story-overlay');
-  if (!overlay) return;
+  var card = document.querySelector('.story-card');
+  if (!card) return;
 
   var tpl = document.getElementById('story-data');
   var entries = Array.prototype.slice.call(tpl.content.querySelectorAll('[data-title]'));
-  var thumbs = Array.prototype.slice.call(document.querySelectorAll('.story-thumb'));
 
   var elCount = document.getElementById('story-count');
   var elTitle = document.getElementById('story-title');
   var elBody = document.getElementById('story-body');
   var elPhoto = document.getElementById('story-photo');
+  var elCaption = document.getElementById('story-caption');
   var elDots = document.getElementById('story-dots');
   var btnPrev = document.getElementById('story-prev');
   var btnNext = document.getElementById('story-next');
-  var panel = overlay.querySelector('.story-overlay-panel');
 
   var current = 0;
-  var lastFocused = null;
 
   entries.forEach(function () {
     var dot = document.createElement('span');
@@ -153,58 +151,29 @@
     elBody.innerHTML = entry.innerHTML;
     elPhoto.src = entry.getAttribute('data-photo');
     elPhoto.alt = entry.getAttribute('data-alt') || '';
+    elPhoto.style.objectPosition = entry.getAttribute('data-pos') || '50% 50%';
+    elCaption.textContent = entry.getAttribute('data-caption') || '';
     dots.forEach(function (d, di) {
       d.className = di === current ? 'active' : '';
     });
-    panel.scrollTop = 0;
-  }
-
-  function open(i) {
-    lastFocused = document.activeElement;
-    render(i);
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    btnNext.focus();
-  }
-
-  function close() {
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastFocused) lastFocused.focus();
   }
 
   function next() { render(current + 1); }
   function prev() { render(current - 1); }
 
-  thumbs.forEach(function (thumb) {
-    var idx = parseInt(thumb.getAttribute('data-story'), 10);
-    thumb.addEventListener('click', function () { open(idx); });
-  });
-
   btnNext.addEventListener('click', next);
   btnPrev.addEventListener('click', prev);
 
-  overlay.querySelectorAll('[data-story-close]').forEach(function (el) {
-    el.addEventListener('click', close);
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (!overlay.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowRight') next();
-    else if (e.key === 'ArrowLeft') prev();
-  });
-
   var touchX = null;
-  panel.addEventListener('touchstart', function (e) {
+  card.addEventListener('touchstart', function (e) {
     touchX = e.changedTouches[0].clientX;
   }, { passive: true });
-  panel.addEventListener('touchend', function (e) {
+  card.addEventListener('touchend', function (e) {
     if (touchX === null) return;
     var dx = e.changedTouches[0].clientX - touchX;
     if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
     touchX = null;
   }, { passive: true });
+
+  render(0);
 })();

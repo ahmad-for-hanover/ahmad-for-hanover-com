@@ -280,79 +280,55 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
 }
 .about-links a { font-weight: 600; border-bottom: 1.5px solid var(--gold); text-decoration: none; padding-bottom: 1px; }
 
-/* ---- Story strip ---- */
+.story-heading {
+  font-family: var(--serif);
+  color: var(--blue);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+
+/* ---- Ahmad's story (inline carousel) ---- */
+.story-strip { margin-top: 0rem; }
 .story-intro { color: var(--slate); margin: 0 0 1.2rem; font-size: 1.05rem; }
 
-.story-strip { margin-top: 2.5rem; }
-.story-thumbs {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  align-items: start;
-}
-.story-thumb {
-  display: block;
-  background: none;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  text-align: center;
-  font-family: var(--sans);
-}
-.story-thumb img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-.story-thumb:hover img,
-.story-thumb:focus-visible img {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(16, 42, 78, 0.18);
-}
-.story-thumb:focus-visible { outline: none; }
-.story-thumb span {
-  display: block;
-  margin-top: 6px;
-  font-size: 0.78rem;
-  line-height: 1.3;
-  color: var(--slate);
-}
-
-/* ---- Story overlay ---- */
-.story-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-.story-overlay.open { display: flex; }
-.story-overlay-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(16, 42, 78, 0.55);
-}
-.story-overlay-panel {
-  position: relative;
+.story-card {
   background: var(--cream);
   border-radius: var(--radius);
-  max-width: 520px;
-  width: 100%;
-  max-height: 88vh;
-  overflow-y: auto;
-  box-shadow: 0 24px 60px rgba(16, 42, 78, 0.4);
+  overflow: hidden;
+}
+.story-card-main {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin-top: 0.4rem; 
+}
+.story-figure { margin: 0; }
+
+.story-caption {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--slate);
+  margin-top: 0.4rem;
+  padding-left: 2px;
 }
 .story-photo {
   width: 100%;
-  height: 240px;
+  height: 270px;
   object-fit: cover;
   display: block;
+  border-radius: var(--radius);
+  margin-top: 0.4rem; 
 }
-.story-content { padding: 1.2rem 2rem 1.6rem; }
+.story-content { padding: 0 1.5rem 0 .25rem; }
+.story-nav {
+  margin-top: 0;
+  padding: 0.8rem 1.8rem;
+  border-top: 1px solid var(--hairline);
+}
+.story-nav .overlay-arrow { background: var(--cream-card); }
 
 /* ==========================================================================
    ISSUES
@@ -618,7 +594,7 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
     border-left: 0;
     border-top: 1px solid var(--hairline);
   }
-  
+
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { display: none; }
   .about-img-mobile {
@@ -627,9 +603,12 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
     margin: 0 auto 1rem;
     max-width: 400px;
   }
-  .story-thumbs { grid-template-columns: repeat(3, 1fr); }
-  .story-photo { height: 170px; }
-  .story-content { padding: 1rem 1.4rem 1.2rem; }
+
+  /* Story carousel stacks: photo on top */
+  .story-card-main { grid-template-columns: 1fr; padding: 0.8rem 0.8rem 0; }
+  .story-photo { height: auto; aspect-ratio: 16 / 9; }
+  .story-content { padding: 1rem 1.4rem 0.4rem; }
+  .story-nav { padding: 0.7rem 1.4rem; }
 
   .issues-grid { grid-template-columns: 1fr; }
 
