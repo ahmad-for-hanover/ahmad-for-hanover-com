@@ -270,16 +270,24 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   padding: 0.4rem 0 0.4rem 1.4rem;
   margin: 1.6rem 0;
 }
-.about-links { font-size: 0.95rem; }
+.about-links {
+  font-size: 0.95rem;
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  display: inline-block;
+}
 .about-links a { font-weight: 600; border-bottom: 1.5px solid var(--gold); text-decoration: none; padding-bottom: 1px; }
-.about-photo .about-links { margin-top: 0.8rem; }
 
 /* ---- Story strip ---- */
+.story-intro { color: var(--slate); margin: 0 0 1.2rem; font-size: 1.05rem; }
+
 .story-strip { margin-top: 2.5rem; }
 .story-thumbs {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
+  align-items: start;
 }
 .story-thumb {
   display: block;
