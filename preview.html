@@ -52,7 +52,7 @@
             <p class="eyebrow">Township Committee &middot; 2026</p>
             <h1 class="hero-title">A Stronger Hanover. Together.</h1>
             <p class="hero-sub">
-              Ahmad Saleh, RN,  is running for Hanover Township Committee to bring careful,
+              Ahmad Saleh, RN, is running for Hanover Township Committee to bring careful,
               accountable, hands-on leadership to the place his family calls home.
             </p>
             <div class="hero-actions">
@@ -128,17 +128,17 @@
               He is also the co-founder of a special needs student transportation company he built
               alongside his mother, growing it from the ground up.
             </p>
-            <img class="about-img about-img-mobile" src="assets/images/ahmad-headshot.jpg"
-               alt="Ahmad Saleh, candidate for Hanover Township Committee" />
             <p>
               He lives on Bee Meadow Parkway with his multigenerational family, the home he chose
               so several generations could live under one roof. That is the lens he brings to local
               government: this is not an abstraction to him, it is his street, his water, his taxes,
               his neighbors.
             </p>
+            <img class="about-img about-img-mobile" src="assets/images/ahmad-headshot.jpg"
+               alt="Ahmad Saleh, candidate for Hanover Township Committee" />
 
             <blockquote class="pull-quote">
-              &ldquo;I will research  [the issues]  for hours, talk to the right people, ask questions,
+              &ldquo;I will research [the issues] for hours, talk to the right people, ask questions,
               and then report back.&rdquo;
             </blockquote>
 
@@ -146,88 +146,58 @@
               That is the standard he wants to hold the Township Committee to. Do the homework,
               talk to the people affected, and come back with straight answers.
             </p>
-            <p class="about-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">Media kit</a>
-              &mdash; bio and photos for press use (coming soon)
-            </p>
           </div>
         </div>
 
-          <div class="story-strip">
-              <p class="eyebrow">Ahmad's story</p>
-              <p class="story-intro">
-              Every chapter of Ahmad's life brought him to this moment. Explore his
-              story and get to know the neighbor behind the candidate.
-              </p>
-              <div class="story-thumbs">
-                <button class="story-thumb" data-story="0">
-                  <img src="assets/images/story/thumb-1-family.jpg" alt="" />
-                  <span>Home is where family is</span>
-                </button>
-                <button class="story-thumb" data-story="1">
-                  <img src="assets/images/story/thumb-2-american-dream.jpg" alt="" />
-                  <span>The American dream</span>
-                </button>
-                <button class="story-thumb" data-story="2">
-                  <img src="assets/images/story/thumb-3-caregiver.jpg" alt="" />
-                  <span>A caregiver at heart</span>
-                </button>
-                <button class="story-thumb" data-story="3">
-                  <img src="assets/images/story/thumb-4-executive.jpg" alt="" />
-                  <span>A successful executive</span>
-                </button>
-                <button class="story-thumb" data-story="4">
-                  <img src="assets/images/story/thumb-5-entrepreneur.jpg" alt="" />
-                  <span>An entrepreneur's grit</span>
-                </button>
-                <button class="story-thumb" data-story="5">
-                  <img src="assets/images/story/thumb-6-hanover.jpg" alt="" />
-                  <span>Why Hanover, why now</span>
-                </button>
+        <!-- ============ AHMAD'S STORY (inline carousel) ============ -->
+        <div class="story-strip">
+          <p class="story-heading">Ahmad's story</p>
+          <p class="story-intro">
+            Every chapter of Ahmad's life brought him to this moment. Explore his
+            story and get to know the neighbor behind the candidate.
+          </p>
+          <div class="story-card">
+            <div class="story-card-main">
+              <figure class="story-figure">
+                <img class="story-photo" id="story-photo" src="" alt="" />
+                <figcaption class="story-caption" id="story-caption"></figcaption>
+              </figure>
+              <div class="story-content">
+                <p class="overlay-eyebrow" id="story-count"></p>
+                <h3 class="overlay-title" id="story-title"></h3>
+                <div class="overlay-body" id="story-body"></div>
+                <p class="overlay-swipe-hint" aria-hidden="true">&larr; swipe between stories &rarr;</p>
               </div>
             </div>
-      </div>
-
-      <!-- ============ STORY OVERLAY ============ -->
-    <div class="story-overlay" id="story-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="story-title">
-      <div class="story-overlay-backdrop" data-story-close></div>
-      <div class="story-overlay-panel" role="document">
-        <button class="issue-overlay-close" data-story-close aria-label="Close">&times;</button>
-        <img class="story-photo" id="story-photo" src="" alt="" />
-        <div class="story-content">
-          <p class="overlay-eyebrow" id="story-count"></p>
-          <h3 class="overlay-title" id="story-title"></h3>
-          <div class="overlay-body" id="story-body"></div>
-          <p class="overlay-swipe-hint" aria-hidden="true">&larr; swipe between stories &rarr;</p>
-          <div class="overlay-nav">
-            <button class="overlay-arrow" id="story-prev" aria-label="Previous story"><span aria-hidden="true">&larr;</span></button>
-            <div class="overlay-dots" id="story-dots" aria-hidden="true"></div>
-            <button class="overlay-arrow" id="story-next" aria-label="Next story"><span aria-hidden="true">&rarr;</span></button>
+            <div class="overlay-nav story-nav">
+              <button class="overlay-arrow" id="story-prev" aria-label="Previous story"><span aria-hidden="true">&larr;</span></button>
+              <div class="overlay-dots" id="story-dots" aria-hidden="true"></div>
+              <button class="overlay-arrow" id="story-next" aria-label="Next story"><span aria-hidden="true">&rarr;</span></button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <template id="story-data">
-      <div data-title="Home Is Where Family Is" data-photo="assets/images/story/story-1-family.jpg" data-alt="Ahmad with his parents, sister, and grandmother at the house on Bee Meadow Parkway">
-        <p>Ahmad Saleh grew up in Lake Hiawatha, just minutes from where he lives today, in a home filled with the kind of love that does not need to announce itself. He is the son of Afghan immigrants, the middle of four siblings, and the person his family calls when they need anything. In 2022, he brought everyone home, buying a house on Bee Meadow Parkway for his parents, his sister, and eventually his 101-year-old grandmother, who moved in after an injury and whom the family cares for together. Multigenerational living was not a plan. It was just what you do when family comes first.</p>
-      </div>
-      <div data-title="The American Dream, Lived" data-photo="assets/images/story/story-2-american-dream.jpg" data-alt="Ahmad with his father">
-        <p>Ahmad's father, a former engineering student from Kabul, woke at midnight for 34 years to push a coffee cart to a corner at 43rd and Broadway in Times Square. His mother earned her commercial driver's license and spent years transporting special needs children to school. They came to America with almost nothing, shielded their children from every hardship, and built a life that was, by any measure, extraordinary. Ahmad never felt the struggle. He felt rich. That is the greatest gift they gave him, and the standard he has carried ever since.</p>
-      </div>
-      <div data-title="A Caregiver at Heart" data-photo="assets/images/story/story-3-caregiver.jpg" data-alt="Ahmad in a healthcare setting">
-        <p>Ahmad found his calling in nursing almost by accident, stopping at a sign at County College of Morris one afternoon and feeling something click. He went on to graduate from Hackensack University's School of Nursing at Mountainside Hospital, where he discovered that caring for people, especially at their most vulnerable, was not just a skill but a vocation. He worked with patients at the end of life, sat with Holocaust survivors, and found in every room the same truth: showing up fully for another person is the most important thing you can do. He calls it sacred work. He still means it.</p>
-      </div>
-      <div data-title="The Executive Who Gets Things Done" data-photo="assets/images/story/story-4-executive.jpg" data-alt="Ahmad at the NASDAQ closing bell">
-        <p>Ahmad spent the past decade transforming healthcare organizations at scale, from rebuilding failing sales divisions to implementing new standards of care inside major health systems. He helped take a publicly traded healthcare company all the way to the NASDAQ closing bell. He manages budgets, negotiates contracts, works with hospital executives and boards, and applies the kind of rigorous, data-driven thinking that turns struggling organizations into high-performing ones. He brings every one of those skills to Hanover Township.</p>
-      </div>
-      <div data-title="An Entrepreneur's Grit" data-photo="assets/images/story/story-5-entrepreneur.jpg" data-alt="Ahmad with his mother">
-        <p>Ahmad and his mother built Safe and Secure Transportation together, starting from a conversation about why she was working for someone else's company when they could build their own. Today it is a seven-figure business serving school districts across the region, transporting special needs students with the same care his mother brought to the job long before it was hers to run. He knows what it takes to start something from nothing, make payroll, solve problems without a playbook, and be accountable to the families depending on you.</p>
-      </div>
-      <div data-title="Why Hanover, Why Now" data-photo="assets/images/story/story-6-hanover.jpg" data-alt="Ahmad talking with residents in the community">
-        <p>When Ahmad moved to Bee Meadow Parkway, he did what any neighbor does: he started paying attention. He joined the local Democratic committee, began having coffee with residents across the township, and found something consistent in those conversations: people who love Hanover and want their voices to matter more. He is running for Township Committee to bring a caring, curious, and prepared perspective to the issues affecting every household here. Not to take sides. To listen, do the homework, and show up for the town that has always felt like home.</p>
-      </div>
-    </template>
+      <template id="story-data">
+        <div data-title="Home Is Where Family Is" data-photo="assets/images/story/story-1-family.jpg" data-alt="Ahmad with his mother, brothers and sister" data-caption="Ahmad with his mother, brothers and sister">
+          <p>Ahmad Saleh grew up in Lake Hiawatha, just minutes from where he lives today, in a home filled with the kind of love that does not need to announce itself. He is the son of Afghan immigrants, the middle of four siblings, and the person his family calls when they need anything. In 2022, he brought everyone home, buying a house on Bee Meadow Parkway for his parents, his sister, and eventually his 101-year-old grandmother, who moved in after an injury and whom the family cares for together. Multigenerational living was not a plan. It was just what you do when family comes first.</p>
+        </div>
+        <div data-title="The American Dream, Lived" data-photo="assets/images/story/story-2-american-dream.jpg" data-alt="Ahmad's mother and father" data-caption="Ahmad's mother and father">
+          <p>Ahmad's father, a former engineering student from Kabul, woke at midnight for 34 years to push a coffee cart to a corner at 43rd and Broadway in Times Square. His mother earned her commercial driver's license and spent years transporting special needs children to school. They came to America with almost nothing, shielded their children from every hardship, and built a life that was, by any measure, extraordinary. Ahmad never felt the struggle. He felt rich. That is the greatest gift they gave him, and the standard he has carried ever since.</p>
+        </div>
+        <div data-title="A Caregiver at Heart" data-photo="assets/images/story/story-3-caregiver.jpg" data-alt="Ahmad is an experienced registered nurse" data-caption="Ahmad is an experienced registered nurse">
+          <p>Ahmad found his calling in nursing almost by accident, stopping at a sign at County College of Morris one afternoon and feeling something click. He went on to graduate from Hackensack University's School of Nursing at Mountainside Hospital, where he discovered that caring for people, especially at their most vulnerable, was not just a skill but a vocation. He worked with patients at the end of life, sat with Holocaust survivors, and found in every room the same truth: showing up fully for another person is the most important thing you can do. He calls it sacred work. He still means it.</p>
+        </div>
+        <div data-title="The Executive Who Gets Things Done" data-photo="assets/images/story/story-4-executive.jpg" data-alt="Ahmad at the NASDAQ closing bell" data-caption="Ahmad at the NASDAQ closing bell">
+          <p>Ahmad spent the past decade transforming healthcare organizations at scale, from rebuilding failing sales divisions to implementing new standards of care inside major health systems. He helped take a publicly traded healthcare company all the way to the NASDAQ closing bell. He manages budgets, negotiates contracts, works with hospital executives and boards, and applies the kind of rigorous, data-driven thinking that turns struggling organizations into high-performing ones. He brings every one of those skills to Hanover Township.</p>
+        </div>
+        <div data-title="An Entrepreneur's Grit" data-photo="assets/images/story/story-5-entrepreneur.jpg" data-alt="Ahmad leading employee training" data-caption="Ahmad leading employee training">
+          <p>Ahmad and his mother built Safe and Secure Transportation together, starting from a conversation about why she was working for someone else's company when they could build their own. Today it is a seven-figure business serving school districts across the region, transporting special needs students with the same care his mother brought to the job long before it was hers to run. He knows what it takes to start something from nothing, make payroll, solve problems without a playbook, and be accountable to the families depending on you.</p>
+        </div>
+        <div data-title="Why Hanover, Why Now" data-photo="assets/images/story/story-6-hanover.jpg"  data-caption="Ahmad fellow Democrat leaders">
+          <p>When Ahmad moved to Bee Meadow Parkway, he did what any neighbor does: he started paying attention. He joined the local Democratic committee, began having coffee with residents across the township, and found something consistent in those conversations: people who love Hanover and want their voices to matter more. He is running for Township Committee to bring a caring, curious, and prepared perspective to the issues affecting every household here. Not to take sides. To listen, do the homework, and show up for the town that has always felt like home.</p>
+        </div>
+      </template>
     </section>
 
     <!-- ============ ISSUES (placeholder cards) ============ -->
