@@ -258,6 +258,7 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   align-items: start;
 }
 .about-img { width: 100%; border-radius: var(--radius); display: block; }
+.about-img-mobile { display: none; }
 .about-body p { color: var(--slate); margin: 0 0 1rem; font-size: 1.05rem; }
 
 .pull-quote {
@@ -619,12 +620,19 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   }
   
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo { order: 2; }
-  .issues-grid { grid-template-columns: 1fr; }
-
+  .about-photo { display: none; }
+  .about-img-mobile {
+    display: block;
+    border-radius: var(--radius);
+    margin: 0 auto 1rem;
+    max-width: 400px;
+  }
   .story-thumbs { grid-template-columns: repeat(3, 1fr); }
   .story-photo { height: 170px; }
   .story-content { padding: 1rem 1.4rem 1.2rem; }
+
+  .issues-grid { grid-template-columns: 1fr; }
+
 }
 
 @media (min-width: 861px) and (max-width: 1024px) {
