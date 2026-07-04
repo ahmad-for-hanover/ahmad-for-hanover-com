@@ -438,12 +438,6 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
 }
 .overlay-dots span.active { background: var(--gold); }
 
-@media (max-width: 860px) {
-  :root { --leading: 1.45; }
-  .issue-overlay-panel { max-height: 90vh; padding: 2rem 1.4rem 1.4rem; }
-  .overlay-swipe-hint { display: block; }
-}
-
 /* ==========================================================================
    EVENTS / DONATE / GET INVOLVED placeholders
    ========================================================================== */
@@ -487,10 +481,12 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
 .disclaimer { font-size: 0.85rem; color: var(--light-blue); margin: 0; }
 
 /* ==========================================================================
-   RESPONSIVE
+   RESPONSIVE — MOBILE  (max 768 px to include iPad Mini)
    ========================================================================== */
-@media (max-width: 860px) {
-  /* Nav collapses to toggle */
+@media (max-width: 768x) {
+  :root { --leading: 1.45; }
+
+  /* Nav */
   .nav-toggle { display: flex; }
   .primary-nav {
     position: absolute;
@@ -522,6 +518,11 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   .hero-panel { order: 1; padding-block: 1.65rem; }
   .hero-img { height: 100%; transform: translateY(-20px) scale(1.15); transform-origin: 50% 0; }
 
+  /* Overlay */
+  .issue-overlay-panel { max-height: 90vh; padding: 2rem 1.4rem 1.4rem; }
+  .overlay-swipe-hint { display: block; }
+
+  /* Layout */
   .pillars-grid { grid-template-columns: 1fr; }
   .pillar + .pillar {
     border-left: 0;
@@ -534,6 +535,23 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
   .issues-grid { grid-template-columns: 1fr; }
 }
 
-@media (min-width: 861px) and (max-width: 1024px) {
+/* ==========================================================================
+   RESPONSIVE — TABLET  (769px – 1024px, larger than ipad mini)
+   ========================================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .primary-nav ul { gap: 1rem; }
+
+  /* Hero stays side-by-side but slightly shorter */
+  .hero { height: 420px; }
+  .hero-img { height: 420px; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-sub { font-size: 1rem; }
+
+  /* Issues grid: 2 columns on tablet */
   .issues-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* About: stack on narrower tablets */
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { order: 2; }
 }
