@@ -528,6 +528,8 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
 .social-links a:hover { transform: translateY(-2px); }
 .social-links img { width: 40px; height: 40px; object-fit: contain; }
 
+.social-links-center { justify-content: center; }
+
 .connect-subtitle {
   font-family: var(--serif);
   color: var(--blue);
