@@ -177,3 +177,57 @@
 
   render(0);
 })();
+
+/* ---- Contact form: POST to Lambda Function URL ---- */
+(function () {
+  "use strict";
+ 
+  var form = document.getElementById("connect-form");
+  if (!form) return;
+ 
+  var ENDPOINT = "https://catcxyenogar7ush4mabl5jhoe0crkrt.lambda-url.us-east-1.on.aws/";
+  var status = document.getElementById("form-status");
+  var button = form.querySelector('button[type="submit"]');
+ 
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+ 
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+ 
+    status.textContent = "Sending...";
+    button.disabled = true;
+ 
+    var payload = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+      website: form.website.value
+    };
+ 
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        return res.json().then(function (result) {
+          if (res.ok && result.ok) {
+            status.textContent = "Thank you! Your message has been sent.";
+            form.reset();
+          } else {
+            status.textContent = "Something went wrong. Please try again.";
+          }
+        });
+      })
+      .catch(function () {
+        status.textContent = "Something went wrong. Please try again.";
+      })
+      .then(function () {
+        button.disabled = false;
+      });
+  });
+})();
