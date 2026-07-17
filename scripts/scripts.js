@@ -196,6 +196,12 @@
       form.reportValidity();
       return;
     }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.value.trim())) {
+      status.textContent = "Please enter a valid email address (like name@example.com).";
+      form.email.focus();
+      return;
+    }
  
     status.textContent = "Sending...";
     button.disabled = true;
