@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmad for Hanover Township Committee</title>
-  <meta name="description" content="Ahmad Saleh, Democrat for Hanover Township Committee. Website coming soon." />
+  <title>Ahmad for Hanover Township Committee 2026</title>
+  <meta name="description" content="Ahmad Saleh, Democrat for Hanover Township Committee. Caregiver. Builder. Bridge." />
 
   <!-- Google Fonts: EB Garamond (display) + Source Sans 3 (everything else) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,33 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles/style.css" />
-
-  <!-- Coming soon: page-specific styles, kept inline so this temporary page is self-contained -->
-  <style>
-    .coming-soon { background: var(--white); padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
-    .coming-soon-inner { text-align: center; max-width: 42rem; margin-inline: auto; }
-    .coming-soon-text { color: var(--slate); margin: 0 0 1.4rem; font-size: 1.05rem; }
-    .social-follow { margin-top: 2rem; }
-    .social-follow p { color: var(--slate); font-size: 0.95rem; margin: 0 0 0.8rem; }
-    .social-links { display: flex; gap: 1rem; justify-content: center; }
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--blue);
-      color: var(--cream);
-      transition: background 0.15s ease, transform 0.1s ease;
-    }
-    .social-links a:hover { background: var(--blue-deep); transform: translateY(-2px); }
-    .social-links svg { width: 22px; height: 22px; }
-  </style>
 </head>
 <body>
 
-  <!-- ============ HEADER (logo + Donate only) ============ -->
+  <!-- ============ HEADER / NAV ============ -->
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="Ahmad for Hanover, home">
@@ -48,7 +25,19 @@
         </span>
       </a>
 
-      <a class="btn btn-blue" href="https://secure.actblue.com/donate/ahmad-for-hanover-township-committee" target="_blank" rel="noopener noreferrer">Donate</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#issues">Issues</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a class="btn btn-blue nav-cta" href="https://secure.actblue.com/donate/ahmad-for-hanover-township-committee" target="_blank" rel="noopener noreferrer">Donate</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -62,38 +51,358 @@
             <p class="eyebrow">Township Committee &middot; 2026</p>
             <h1 class="hero-title">A Stronger Hanover. Together.</h1>
             <p class="hero-sub">
-              Ahmad Saleh is running for Hanover Township Committee to bring careful,
+              Ahmad Saleh, RN, is running for Hanover Township Committee to bring
               accountable, hands-on leadership to the place his family calls home.
             </p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="#connect">Contact us</a>
+              <a class="btn btn-gold" href="https://secure.actblue.com/donate/ahmad-for-hanover-township-committee" target="_blank" rel="noopener noreferrer">Donate</a>
+            </div>
           </div>
         </div>
         <div class="hero-photo">
-          <img class="hero-img" src="assets/images/ahmad-at-morris-county-dems.jpg" alt="Ahmad Saleh speaking at a Morris County Democrats event" />
+          <img class="hero-img" src="assets/images/hero.jpg" alt="Ahmad Saleh" />
           <div class="hero-photo-fade" aria-hidden="true"></div>
         </div>
       </section>
     </div>
 
-    <!-- ============ COMING SOON ============ -->
-    <section class="coming-soon">
-      <div class="container coming-soon-inner">
-        <p class="eyebrow center">Our full site is on the way</p>
-        <h2 class="section-title center">Coming soon</h2>
-        <p class="coming-soon-text">
-          We are putting the finishing touches on our campaign website. Check back soon
-          to read where Ahmad stands, find upcoming events, and learn how to get involved.
-          In the meantime, you can connect with the campaign's social media accounts and support by donating to the campaign.
-        </p>
-        <div class="social-follow">
-          <p>Follow us on social media</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/ahmad4hanover" target="_blank" rel="noopener noreferrer" aria-label="Follow Ahmad for Hanover on Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/ahmad4hanover" target="_blank" rel="noopener noreferrer" aria-label="Follow Ahmad for Hanover on Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-            </a>
+    <!-- ============ BRAND PILLARS ============ -->
+    <section class="pillars" aria-label="What Ahmad stands for">
+      <div class="container pillars-grid">
+        <article class="pillar">
+          <div class="pillar-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 3.8C19.5 16.4 12 21 12 21z"/>
+            </svg>
           </div>
+          <div class="pillar-text">
+            <h2>Caregiver</h2>
+            <p>A registered nurse who has spent his career looking after people when it matters most.</p>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="pillar-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9.5 12 4l9 5.5"/>
+              <path d="M5 9.5V19M9.33 9.5V19M14.67 9.5V19M19 9.5V19"/>
+              <path d="M3.5 19.5h17"/>
+            </svg>
+          </div>
+          <div class="pillar-text">
+            <h2>Entrepreneur</h2>
+            <p>Co-founder of a seven-figure student transportation company he built with his mother, serving school districts across the region.</p>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="pillar-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+              <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+              <path d="m21 3 1 11h-2"/>
+              <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+              <path d="M3 4h8"/>
+            </svg>
+          </div>
+          <div class="pillar-text">
+            <h2>Neighbor</h2>
+            <p>A neighbor who listens first, brings people to the table, and reports back honestly.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT THE CANDIDATE ============ -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo">
+            <img class="about-img" src="assets/images/headshot.jpg"
+                alt="Ahmad Saleh, candidate for Hanover Township Committee" />
+          </div>
+          <div class="about-body">
+            <p class="eyebrow">About the candidate</p>
+            <h2 class="section-title">Ahmad Saleh, RN</h2>
+            <p>
+              Ahmad is a registered nurse and a medical device executive at a global health technology company.
+              He is also the co-founder of a special needs student transportation company he built
+              alongside his mother, growing it from the ground up.
+            </p>
+            <p>
+              He lives on Bee Meadow Parkway with his multigenerational family, the home he chose
+              so several generations could live under one roof. That is the lens he brings to local
+              government: he pays the same property taxes, gets the same water bills, drives the
+              same roads, and counts on the same police and fire services as every other Hanover
+              family. None of this is an abstraction to him.
+            </p>
+            <img class="about-img about-img-mobile" src="assets/images/ahmad-headshot.jpg"
+               alt="Ahmad Saleh, candidate for Hanover Township Committee" />
+
+            <blockquote class="pull-quote">
+              I will research the issues completely, talk to the right people, ask questions,
+              and then report back.
+            </blockquote>
+
+            <p>
+              That is the standard he wants to hold the Township Committee to. Do the homework,
+              talk to the people affected, and come back with straight answers.
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ AHMAD'S STORY (inline carousel) ============ -->
+        <div class="story-strip">
+          <p class="story-heading">Ahmad's story</p>
+          <p class="story-intro">
+            Every chapter of Ahmad's life brought him to this moment. Explore his
+            story and get to know the neighbor behind the candidate.
+          </p>
+          <div class="story-card">
+            <div class="story-card-main">
+              <figure class="story-figure">
+                <img class="story-photo" id="story-photo" src="" alt="" />
+                <figcaption class="story-caption" id="story-caption"></figcaption>
+              </figure>
+              <div class="story-content">
+                <p class="overlay-eyebrow" id="story-count"></p>
+                <h3 class="overlay-title" id="story-title"></h3>
+                <div class="overlay-body" id="story-body"></div>
+                <p class="overlay-swipe-hint" aria-hidden="true">&larr; swipe between stories &rarr;</p>
+              </div>
+            </div>
+            <div class="overlay-nav story-nav">
+              <button class="overlay-arrow" id="story-prev" aria-label="Previous story"><span aria-hidden="true">&larr;</span></button>
+              <div class="overlay-dots" id="story-dots" aria-hidden="true"></div>
+              <button class="overlay-arrow" id="story-next" aria-label="Next story"><span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <template id="story-data">
+        <div data-title="Home Is Where Family Is" data-photo="assets/images/story/story-1-family.jpg" data-alt="Ahmad with his mother, brothers and sister" data-caption="Ahmad with his mother, brothers and sister">
+          <p>Ahmad Saleh grew up in Lake Hiawatha, just minutes from where he lives today, in a home filled with the kind of love that does not need to announce itself. He is the son of Afghan immigrants, the middle of four siblings, and the person his family calls when they need anything. In 2022, he brought everyone home, buying a house on Bee Meadow Parkway for his parents, his sister, and eventually his 101-year-old grandmother, who moved in after an injury and whom the family cares for together. Multigenerational living was not a plan. It was just what you do when family comes first.</p>
+        </div>
+        <div data-title="The American Dream, Lived" data-photo="assets/images/story/story-2-american-dream.jpg" data-alt="Ahmad's mother and father" data-caption="Ahmad's mother and father">
+          <p>Ahmad's father, a former engineering student from Kabul, woke at midnight for 34 years to push a coffee cart to a corner at 43rd and Broadway in Times Square. His mother earned her commercial driver's license and spent years transporting special needs children to school. They came to America with almost nothing, shielded their children from every hardship, and built a life that was, by any measure, extraordinary. Ahmad never felt the struggle. He felt rich. That is the greatest gift they gave him, and the standard he has carried ever since.</p>
+        </div>
+        <div data-title="A Caregiver at Heart" data-photo="assets/images/story/story-3-caregiver.jpg" data-alt="Ahmad is an experienced registered nurse" data-caption="Ahmad is an experienced registered nurse">
+          <p>Ahmad found his calling in nursing almost by accident, stopping at a sign at County College of Morris one afternoon and feeling something click. He went on to graduate from Hackensack University's School of Nursing at Mountainside Hospital, where he discovered that caring for people, especially at their most vulnerable, was not just a skill but a vocation. He worked with patients at the end of life, sat with Holocaust survivors, and found in every room the same truth: showing up fully for another person is the most important thing you can do. He calls it sacred work. He still means it.</p>
+        </div>
+        <div data-title="The Executive Who Gets Things Done" data-photo="assets/images/story/story-4-executive.jpg" data-alt="Ahmad at the NASDAQ closing bell" data-caption="Ahmad at the NASDAQ closing bell">
+          <p>Ahmad spent the past decade transforming healthcare organizations at scale, from rebuilding failing sales divisions to implementing new standards of care inside major health systems. He helped take a publicly traded healthcare company all the way to the NASDAQ closing bell. He manages budgets, negotiates contracts, works with hospital executives and boards, and applies the kind of rigorous, data-driven thinking that turns struggling organizations into high-performing ones. He brings every one of those skills to Hanover Township.</p>
+        </div>
+        <div data-title="An Entrepreneur's Grit" data-photo="assets/images/story/story-5-entrepreneur.jpg" data-alt="Ahmad leading employee training" data-caption="Ahmad leading employee training">
+          <p>Ahmad and his mother built Safe and Secure Transportation together, starting from a conversation about why she was working for someone else's company when they could build their own. Today it is a seven-figure business serving school districts across the region, transporting special needs students with the same care his mother brought to the job long before it was hers to run. He knows what it takes to start something from nothing, make payroll, solve problems without a playbook, and be accountable to the families depending on you.</p>
+        </div>
+        <div data-title="Why Hanover, Why Now" data-photo="assets/images/story/story-6-hanover.jpg"  data-caption="Ahmad fellow Democrat leaders">
+          <p>When Ahmad moved to Bee Meadow Parkway, he did what any neighbor does: he started paying attention. He joined the local Democratic committee, began having coffee with residents across the township, and found something consistent in those conversations: people who love Hanover and want their voices to matter more. He is running for Township Committee to bring a caring, curious, and prepared perspective to the issues affecting every household here. Not to take sides. To listen, do the homework, and show up for the town that has always felt like home.</p>
+        </div>
+      </template>
+    </section>
+
+    <!-- ============ ISSUES (placeholder cards) ============ -->
+    <section id="issues" class="issues">
+      <div class="container">
+        <p class="eyebrow center">The Issues</p>
+        <h2 class="section-title center">Ahmad's Vision: Hanover 2036</h2>
+        <p class="issues-intro">
+          Government should think beyond the next budget cycle. If elected, Ahmad will champion Hanover 2036, a long-term strategic planning initiative that brings residents, business owners, first responders, schools, and community organizations together to develop a shared vision for the Township over the next decade. He will advocate for transparency and accountability at every step, and push to make sure that decisions made today preserve Hanover's character and prepare our community for the future.
+        </p>
+        <div class="issues-grid">
+          <article class="issue-card" data-issue="0" tabindex="0" role="button" aria-label="Read more about One Hanover">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>One Hanover</h3>
+            <p>Hanover works best when everyone has a seat at the table. Ahmad is committed to listening across party lines and putting neighbors first.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="1" tabindex="0" role="button" aria-label="Read more about Strong Families, Strong Community">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-6h6v6"/></svg></span>
+            <h3>Strong Families. Strong Community.</h3>
+            <p>Hanover's greatest strength is its families. Ahmad will fight for the safe neighborhoods, strong schools, and community values that make this township a place people are proud to call home.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="2" tabindex="0" role="button" aria-label="Read more about Keep Residential Taxes Low Through Smart Economic Growth">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M3 10 12 3l9 7"/><path d="M5 10v9M9.5 10v9M14.5 10v9M19 10v9"/></svg></span>
+            <h3>Keep Residential Taxes Low Through Smart Economic Growth</h3>
+            <p>Smart growth means lower taxes. Ahmad will work to attract the right businesses to Hanover, building a stronger commercial tax base that benefits every homeowner.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="3" tabindex="0" role="button" aria-label="Read more about Build a Town Center for the Future">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 9h.01M15 9h.01M9 12.5h.01M15 12.5h.01"/></svg></span>
+            <h3>Build a Town Center for the Future</h3>
+            <p>Hanover deserves a true gathering place. Ahmad will lead the conversation about a community-driven Town Center that reflects who we are and where we are headed.</p><span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="4" tabindex="0" role="button" aria-label="Read more about Support Our Police Officers">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Support Our Police Officers</h3>
+            <p>Hanover's police officers keep our community safe. Ahmad will be their advocate on the Township Committee, fighting for the staffing, tools, and support they need.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="5" tabindex="0" role="button" aria-label="Read more about Clean Water for Every Resident">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 10.3a6 6 0 0 1-12 0c0-3.9 6-10.3 6-10.3z"/></svg></span>
+            <h3>Clean Water for Every Resident</h3>
+            <p>Every Hanover resident deserves safe drinking water without an unexpected bill. Ahmad will fight to secure outside funding first, so the cost does not fall on homeowners.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="6" tabindex="0" role="button" aria-label="Read more about Stop Leaving Grant Money on the Table">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v6M18 9v6"/></svg></span>
+            <h3>Stop Leaving Grant Money on the Table</h3>
+            <p>Other New Jersey municipalities are winning millions in grants every year. Ahmad will push for a dedicated strategy to make sure Hanover gets its share.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="7" tabindex="0" role="button" aria-label="Read more about Address roughly 8 million dollars in Unfunded Capital Improvements">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 8-5 5-3-3-4 4"/></svg></span>
+            <h3>Address ~$8 Million in Unfunded Capital Improvements</h3>
+            <p>Hanover is carrying approximately $8 million in unfunded capital projects, and the cost grows every year they go unaddressed. Ahmad will push for a responsible long-term plan that protects taxpayers.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="8" tabindex="0" role="button" aria-label="Read more about Repair Our Neighborhood Roads">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21 8 3M20 21 16 3"/><path d="M12 5v3M12 11v3M12 17v3"/></svg></span>
+            <h3>Repair Our Neighborhood Roads</h3>
+            <p>Hanover's neighborhood roads need attention, and the longer they wait, the more expensive they become. Ahmad will push for a long-term maintenance plan that puts side streets on the map.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="9" tabindex="0" role="button" aria-label="Read more about Make Dangerous Intersections Safer">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="20" rx="3"/><circle cx="12" cy="7" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="17" r="1"/></svg></span>
+            <h3>Make Dangerous Intersections Safer</h3>
+            <p>Hanover's dangerous intersections are not an accident waiting to happen. They are already happening. Ahmad will bring together the right people to find practical solutions that make every street safer.</p>
+            <span class="read-more">Read more</span>
+          </article>
+          <article class="issue-card" data-issue="10" tabindex="0" role="button" aria-label="Read more about Strengthen Our Fire Service">
+            <span class="issue-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-1 .5-2 1-2.5C9 9 12 6 12 2z"/><path d="M8.5 14a5 5 0 0 0 7 0"/></svg></span>
+            <h3>Strengthen Our Fire Service</h3>
+            <p>Hanover's firefighters are among our greatest assets. Ahmad will partner with the Fire Commissioners to advance a more efficient, sustainable fire service that serves residents for generations to come.</p>
+            <span class="read-more">Read more</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ISSUES OVERLAY ============ -->
+    <div class="issue-overlay" id="issue-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <div class="issue-overlay-backdrop" data-close></div>
+      <div class="issue-overlay-panel" role="document">
+        <button class="issue-overlay-close" data-close aria-label="Close">&times;</button>
+        <p class="overlay-eyebrow" id="overlay-count"></p>
+        <h3 class="overlay-title" id="overlay-title"></h3>
+        <div class="overlay-body" id="overlay-body"></div>
+        <p class="overlay-swipe-hint" aria-hidden="true">&larr; swipe to move between issues &rarr;</p>
+        <div class="overlay-nav">
+          <button class="overlay-arrow" id="overlay-prev" aria-label="Previous issue"><span aria-hidden="true">&larr;</span></button>
+          <div class="overlay-dots" id="overlay-dots" aria-hidden="true"></div>
+          <button class="overlay-arrow" id="overlay-next" aria-label="Next issue"><span aria-hidden="true">&rarr;</span></button>
+        </div>
+      </div>
+    </div>
+
+    <template id="issue-data">
+      <div data-title="One Hanover">
+        <p>Local government should bring people together, not divide them. Whether residents are Republican, Democrat, Independent, or unaffiliated, everyone wants safe neighborhoods, well-maintained roads, responsible spending, and a town they can be proud of. If elected, Ahmad will listen first, work with anyone who has good ideas, and always put Hanover ahead of partisan politics. At the end of the day, neighbors come before party labels, and that is the principle he will bring to every meeting and every vote.</p>
+      </div>
+      <div data-title="Strong Families. Strong Community.">
+        <p>The strength of Hanover has always been its families. Ahmad believes in supporting safe neighborhoods, access to healthcare and well-funded public health programs, excellent schools, academic achievement, personal responsibility, civic pride, patriotism, and respect for every person. If elected, he will advocate for policies that embrace new opportunities while preserving the values that have made Hanover such an exceptional place to live and raise a family.</p>
+      </div>
+      <div data-title="Keep Residential Taxes Low Through Smart Economic Growth">
+        <p>The most sustainable way to keep residential property taxes low is by growing Hanover's commercial tax base. If elected, Ahmad will actively champion efforts to engage businesses and employers that are a good fit for the community, encouraging them to relocate or expand in Hanover. Every quality business attracted to the township strengthens the local economy, creates jobs, and helps reduce the tax burden on homeowners.</p>
+      </div>
+      <div data-title="Build a Town Center for the Future">
+        <p>Hanover deserves a place that brings the community together. As part of Hanover 2036, Ahmad will facilitate a community-driven conversation about developing a public-private partnership to create a vibrant Town Center that supports local businesses, provides gathering spaces for families, and gives residents a destination they can truly call the heart of Hanover. He will advocate that any future development respect the character of the Township while enhancing the quality of life for everyone who calls it home.</p>
+      </div>
+      <div data-title="Support Our Police Officers">
+        <p>Public safety is government's first responsibility. Hanover currently has approximately 31 police officers serving the Township, and Ahmad believes the community should continually evaluate whether that staffing level is sufficient to meet the needs of a growing population. If elected, he will advocate for the personnel, equipment, training, and technology officers need to continue keeping Hanover one of the safest communities in New Jersey. They will find a steadfast partner and a strong voice on the Township Committee.</p>
+      </div>
+      <div data-title="Clean Water for Every Resident">
+        <p>Every resident deserves safe drinking water without facing an unreasonable financial burden. The controversy surrounding Hanover's water infrastructure, known locally as Pipegate, raised serious questions about transparency, accountability, and whether residents were given a full picture of the decisions being made on their behalf. Ahmad believes those questions deserve straight answers, and that the best way to restore trust is through action. If elected, he will work aggressively with neighboring municipalities, Morris County, the State of New Jersey, and the federal government to pursue every available funding opportunity for lead service line replacement. Before asking Hanover taxpayers to pay more, he will push to exhaust every outside funding source available.</p>
+      </div>
+      <div data-title="Stop Leaving Grant Money on the Table">
+        <p>Every year, municipalities across New Jersey secure millions of dollars in grants for roads, infrastructure, parks, recreation, public safety, flood mitigation, and environmental projects. Hanover has largely left that money on the table. If elected, Ahmad will advocate for a dedicated municipal grant strategy: a systematic approach to identifying, pursuing, and winning the funding that other townships are already capturing. Every grant dollar Hanover secures is a dollar its taxpayers do not have to provide.</p>
+      </div>
+      <div data-title="Address ~$8 Million in Unfunded Capital Improvements">
+        <p>Hanover currently has approximately $8 million in unfunded capital improvement projects that will eventually need to be addressed. While the budget appears balanced due to a provision the state allows, the Township is carrying a growing debt obligation that does not disappear by being deferred. Delaying these projects only increases their future cost, and without a long-term funding strategy, taxpayers could continue seeing approximately $1 to $2 million in additional debt issued each year just to keep pace. If elected, Ahmad will advocate for responsible financial planning that prioritizes projects, pursues outside funding, and protects taxpayers from unnecessary debt.</p>
+      </div>
+      <div data-title="Repair Our Neighborhood Roads">
+        <p>Residents should not have to weave around potholes or drive over rough, deteriorating roads every day. If elected, Ahmad will advocate for prioritizing the repair of neighborhood streets, improving pavement conditions, and developing a long-term maintenance schedule that addresses roads before they become significantly more expensive to fix. Side streets in particular deserve attention, not just main roads. Well-maintained roads improve safety, protect vehicles, and preserve property values throughout the Township.</p>
+      </div>
+      <div data-title="Make Dangerous Intersections Safer">
+        <p>Too many intersections throughout Hanover have become frequent locations for accidents and near misses. If elected, Ahmad will work with traffic engineers, county officials, law enforcement, and residents to identify practical safety improvements, including better traffic signal timing, improved signage, safer pedestrian crossings, and traffic-calming measures where appropriate. Smart infrastructure saves lives.</p>
+      </div>
+      <div data-title="Strengthen Our Fire Service">
+        <p>When residents dial 911, they expect a fast and responsive fire department. Hanover's volunteer and paid firefighters are among the Township's greatest assets, and they deserve full support. While statute requires separation between the Township Committee and the independent fire districts, if elected Ahmad will partner with the Fire Commissioners to advocate for a consolidated and hybrid approach that improves operational efficiency, strengthens recruitment and retention, and explores opportunities for greater coordination where it benefits both public safety and taxpayers. He will also raise the urgency of addressing the condemned third floor of the Cedar Knolls firehouse, a safety issue that has gone unresolved for too long. The goal is straightforward: support the Commissioners, advance a sustainable hybrid model, and ensure Hanover has an outstanding fire service for generations to come.</p>
+      </div>
+    </template>
+
+    <!-- ============ EVENTS  ============ -->
+    <section id="events" class="events">
+      <div class="container">
+        <p class="eyebrow center">Events</p>
+        <h2 class="section-title center">Where to find us</h2>
+        <p class="placeholder-note center">
+          Ahmad is excited to get to know more of his neighbors across Hanover. In the
+          coming months, the campaign will be out at community events, town gatherings,
+          and front porches throughout the township. Check back soon for dates and
+          places where you can meet Ahmad in person.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONNECT ============ -->
+    <section id="connect" class="connect">
+      <div class="container">
+        <p class="eyebrow">Connect</p>
+        <h2 class="section-title">Stay in touch</h2>
+        <div class="connect-grid">
+          <div class="connect-social">
+            <h3 class="connect-subtitle">Follow us on Social</h3>
+            <p>
+              Follow the campaign on
+              <a href="https://www.facebook.com/ahmad4hanover" target="_blank" rel="noopener noreferrer">Facebook</a>,
+              <a href="https://www.instagram.com/ahmad4hanover" target="_blank" rel="noopener noreferrer">Instagram</a>,
+              and <a href="https://bsky.app/profile/ahmad4hanover.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+              for updates, event announcements, and Ahmad's conversations with
+              neighbors across Hanover.
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/ahmad4hanover" target="_blank" rel="noopener noreferrer" aria-label="Ahmad for Hanover on Facebook">
+                <img src="assets/images/social/facebook.png" alt="" />
+              </a>
+              <a href="https://www.instagram.com/ahmad4hanover" target="_blank" rel="noopener noreferrer" aria-label="Ahmad for Hanover on Instagram">
+                <img src="assets/images/social/instagram.svg" alt="" />
+              </a>
+              <a href="https://bsky.app/profile/ahmad4hanover.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Ahmad for Hanover on Bluesky">
+                <img src="assets/images/social/bluesky.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <form class="connect-form" id="connect-form" novalidate>
+            <h3 class="connect-subtitle">Send us a message</h3>
+            <p class="connect-form-intro">
+              Want to volunteer, invite Ahmad to an event, or share what's on your
+              mind? Reach out about anything. This inbox is monitored and you will
+              hear back within 24 hours.
+            </p>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" required />
+            </div>
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-blue">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -104,11 +413,14 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
+        <!-- PLACEHOLDER: circular emblem SVG goes here -->
+        <div class="emblem-placeholder" aria-hidden="true"></div>
         <p class="footer-name">Ahmad for Hanover Township Committee</p>
       </div>
       <p class="disclaimer">Paid for by Ahmad for Hanover Township Committee</p>
     </div>
   </footer>
 
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
