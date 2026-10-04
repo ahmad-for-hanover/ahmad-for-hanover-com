@@ -441,5 +441,92 @@
   </footer>
 
   <script src="scripts/scripts.js"></script>
+  <!-- GOLF FUNDRAISER POPUP -->
+<div id="fundraiserPopup" style="
+  display:flex;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.78);
+  z-index:99999;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  box-sizing:border-box;
+">
+  <div style="
+    position:relative;
+    width:min(92vw,520px);
+    max-height:92vh;
+    overflow:auto;
+    background:#071d3b;
+    border-radius:16px;
+    box-shadow:0 15px 50px rgba(0,0,0,.45);
+    text-align:center;
+  ">
+
+    <button
+      onclick="document.getElementById('fundraiserPopup').style.display='none'"
+      aria-label="Close fundraiser popup"
+      style="
+        position:absolute;
+        right:10px;
+        top:10px;
+        z-index:2;
+        width:40px;
+        height:40px;
+        border:0;
+        border-radius:50%;
+        background:rgba(255,255,255,.95);
+        color:#071d3b;
+        font-size:26px;
+        cursor:pointer;
+      ">×</button>
+
+    <img
+      src="assets/images/IMG_5804.png"
+      alt="Ahmad Saleh Indoor Golf Event and Fundraiser"
+      style="
+        display:block;
+        width:100%;
+        height:auto;
+        border-radius:16px 16px 0 0;
+      "
+    >
+
+    <div style="padding:16px 18px 20px;">
+      <a
+        href="https://secure.actblue.com/donate/a4h26?refcode=ab_qr_code&utm_source=qr_code"
+        target="_blank"
+        rel="noopener"
+        style="
+          display:block;
+          padding:14px 18px;
+          background:#d6a62e;
+          color:#071d3b;
+          text-decoration:none;
+          font-weight:700;
+          border-radius:8px;
+          font-size:18px;
+        ">
+        RSVP / Get Tickets
+      </a>
+
+      <button
+        onclick="document.getElementById('fundraiserPopup').style.display='none'"
+        style="
+          margin-top:12px;
+          border:0;
+          background:transparent;
+          color:white;
+          text-decoration:underline;
+          cursor:pointer;
+          font-size:15px;
+        ">
+        Continue to website
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END GOLF FUNDRAISER POPUP -->
 </body>
 </html>
