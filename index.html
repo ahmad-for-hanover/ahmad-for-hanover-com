@@ -23,7 +23,52 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
+<!-- HANOVER HELLO EVENT POPUP -->
+<div id="hanoverHelloPopup" class="event-popup-overlay">
+  <div class="event-popup">
 
+    <button
+      class="event-popup-close"
+      onclick="closeHanoverHello()"
+      aria-label="Close event announcement">
+      &times;
+    </button>
+
+    <img
+      src="assets/images/IMG_6161.png"
+      alt="Hanover Hello with Ahmad Saleh - October 15, 2026"
+      class="event-popup-flyer">
+
+    <a
+      href="#"
+      class="event-calendar-button"
+      onclick="downloadHanoverHello(event)">
+      📅 Add to Calendar
+    </a>
+
+    <button
+      class="event-popup-dismiss"
+      onclick="closeHanoverHello()">
+      Continue to Website
+    </button>
+
+  </div>
+</div>
+<!-- END HANOVER HELLO EVENT POPUP -->
+<!-- HANOVER HELLO TOP BANNER -->
+<div class="hanover-event-banner">
+  <div class="hanover-event-banner-text">
+    <strong>⭐ HANOVER HELLO!</strong>
+    <span>Meet Ahmad • Oct. 15 • 6:30–8 PM</span>
+  </div>
+
+  <a href="#"
+     class="hanover-banner-calendar"
+     onclick="downloadHanoverHello(event)">
+    📅 Add to Calendar
+  </a>
+</div>
+<!-- END HANOVER HELLO TOP BANNER -->
   <!-- ============ HEADER / NAV ============ -->
   <header class="site-header">
     <div class="container nav-inner">
@@ -441,6 +486,73 @@
   </footer>
 
   <script src="scripts/scripts.js"></script>
- 
+ <script>
+function closeHanoverHello() {
+  document.getElementById('hanoverHelloPopup').style.display = 'none';
+}
+
+function downloadHanoverHello(event) {
+  event.preventDefault();
+
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Ahmad Saleh for Hanover//Hanover Hello//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:hanover-hello-20261015@ahmadforhanover.com',
+    'DTSTAMP:20261006T210000Z',
+    'DTSTART;TZID=America/New_York:20261015T183000',
+    'DTEND;TZID=America/New_York:20261015T200000',
+    'SUMMARY:Hanover Hello! with Ahmad Saleh',
+    'LOCATION:Hanover Township Community Center\\, 15 N. Jefferson Rd\\, Whippany\\, NJ',
+    'DESCRIPTION:Come say hello! Bring your questions\\, ideas\\, and neighbors. No appointment needed.',
+    
+    'BEGIN:VALARM',
+    'TRIGGER:-P1W',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Hanover Hello is one week away!',
+    'END:VALARM',
+
+    'BEGIN:VALARM',
+    'TRIGGER:-P3D',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Hanover Hello is in 3 days!',
+    'END:VALARM',
+
+    'BEGIN:VALARM',
+    'TRIGGER:-P1D',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Hanover Hello is tomorrow!',
+    'END:VALARM',
+
+    'BEGIN:VALARM',
+    'TRIGGER:-PT2H',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Hanover Hello starts in 2 hours!',
+    'END:VALARM',
+
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  const blob = new Blob([ics], {
+    type: 'text/calendar;charset=utf-8'
+  });
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+
+  link.href = url;
+  link.download = 'Hanover-Hello-Ahmad-Saleh.ics';
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+</script>
 </body>
 </html>
