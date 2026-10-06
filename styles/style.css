@@ -925,3 +925,37 @@ h1, h2, h3, .hero-title, .section-title { font-family: var(--serif); }
     font-size: 13px;
   }
 }
+
+/* FINAL HANOVER HELLO CALENDAR BUTTON */
+
+.event-calendar-button,
+.event-calendar-button:link,
+.event-calendar-button:visited {
+  display: block !important;
+  width: calc(100% - 24px) !important;
+  margin: 12px auto 16px auto !important;
+  padding: 16px 20px !important;
+
+  background: #FFBD2E !important;
+  color: #111111 !important;
+
+  border: none !important;
+  border-radius: 12px !important;
+
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.3px !important;
+
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+}
+
+.event-calendar-button:hover,
+.event-calendar-button:active {
+  background: #F5AD13 !important;
+  color: #111111 !important;
+  text-decoration: none !important;
+}
