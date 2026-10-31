@@ -467,6 +467,91 @@
 
   <script src="scripts/scripts.js"></script>
 
+<style>
+  #endorsementPopup {
+    width: min(94vw, 560px);
+    max-height: 94vh;
+    max-height: 94dvh;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: auto;
+    border: 2px solid #d8b44c;
+    border-radius: 16px;
+    background: #102b45;
+    text-align: right;
+  }
 
+  #endorsementPopup::backdrop {
+    background: rgba(0, 10, 24, 0.85);
+  }
+
+  #endorsementPopup img {
+    display: block;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    margin-top: 10px;
+  }
+
+  #endorsementPopup button {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 24px;
+    background: #e6bf58;
+    color: #102b45;
+    font: 600 16px system-ui;
+    cursor: pointer;
+  }
+</style>
+
+<dialog
+  id="endorsementPopup"
+  aria-label="Endorsement announcement"
+>
+  <button id="closeEndorsement" type="button" autofocus>
+    Close ×
+  </button>
+
+  <img
+    src="endorsement.jpg"
+    alt="Governor Mikie Sherrill endorses Ahmad Saleh
+         for Hanover Township Committee."
+  >
+</dialog>
+
+<script>
+(() => {
+  const popup = document.getElementById("endorsementPopup");
+  let previousFocus;
+  let previousOverflow;
+
+  document.getElementById("closeEndorsement")
+    .addEventListener("click", () => popup.close());
+
+  popup.addEventListener("close", () => {
+    document.documentElement.style.overflow = previousOverflow;
+    if (previousFocus?.isConnected) previousFocus.focus();
+  });
+
+  function openPopup() {
+    if (typeof popup.showModal !== "function") return;
+
+    previousFocus = document.activeElement;
+    previousOverflow = document.documentElement.style.overflow;
+
+    popup.showModal();
+    document.documentElement.style.overflow = "hidden";
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", openPopup, {
+      once: true
+    });
+  } else {
+    openPopup();
+  }
+})();
+</script>
 </body>
 </html>
